@@ -1,4 +1,5 @@
 var container, camera, renderer, scene, crate;
+setup();
 console.log('Hello World');
 
 function setup(){
@@ -16,5 +17,3 @@ function setup(){
 
 
 };
-
-setup();
