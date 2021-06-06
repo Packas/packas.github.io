@@ -1,5 +1,5 @@
 var container, camera, renderer, scene, crate;
-
+console.log('Hello World');
 
 function setup(){
     container = document.querySelector("./scene");
