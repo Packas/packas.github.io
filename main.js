@@ -3,7 +3,7 @@ setup();
 console.log('Hello World');
 
 function setup(){
-    container = document.querySelector("./scene");
+    container = document.querySelector(".scene");
     scene = new THREE.Scene();
     
     const fov = 35;
