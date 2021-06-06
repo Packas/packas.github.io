@@ -1,5 +1,6 @@
 var container, camera, renderer, scene, crate;
 
+
 function setup(){
     container = document.querySelector("./scene");
     scene = new THREE.Scene();
@@ -15,3 +16,5 @@ function setup(){
 
 
 };
+
+setup();
