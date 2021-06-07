@@ -1,19 +1,28 @@
 var container, camera, renderer, scene, crate;
-setup();
-console.log('Hello World');
 
 function setup(){
     container = document.querySelector(".scene");
     scene = new THREE.Scene();
     
     const fov = 35;
-    const aspect = window.innerWidth/window.innerHeight;
+    const aspect = container.clientWidth / container.clientHeight;
     const clipping = {
         near: 0.01,
         far: 500
     };
-    console.log(fov, aspect, clipping.far, clipping.near);
-    
 
+    camera = new THREE.PerspectiveCamera(fov, aspect, clipping.near, clipping.far);
+    camera.position.set(-50, 40, 350);
+    renderer = new THREE.WebGLRenderer({antialias:true});
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    container.appendChild(renderer.domElement);
 
+    let loader = new THREE.GLTFLoader;
+    loader.load("./3d/scene.gltf", (gltf) => {
+        scene.add(gltf.scene);
+        renderer.render(scene, camera);
+    });
 };
+
+setup();
