@@ -18,7 +18,7 @@ function setup(){
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
-    let loader = new THREE.GLTFLoader;
+    let loader = new THREE.GLTFLoader();
     loader.load("./3d/scene.gltf", (gltf) => {
         scene.add(gltf.scene);
         renderer.render(scene, camera);
