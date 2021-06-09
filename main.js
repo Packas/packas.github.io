@@ -12,7 +12,7 @@ function setup(){
     };
 
     camera = new THREE.PerspectiveCamera(fov, aspect, clipping.near, clipping.far);
-    camera.position.set(-50, 0, 100);
+    camera.position.set(0, 0, 50);
     renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
